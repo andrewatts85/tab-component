@@ -1,2 +1,2 @@
-# tab-component
+# Tab Component
 Fancy tab component
