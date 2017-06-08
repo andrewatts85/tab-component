@@ -1,0 +1,88 @@
+.tabComponent {
+  position: relative;
+  clear: both;
+  min-height: 185px;
+  margin: 2em auto;
+  width: 30em;
+  font-family: sans-serif;
+  color: dimgray;
+}
+
+.tab {
+  float: left;
+}
+
+.tab label {
+  background-color: gainsboro;
+  /*color: black;*/
+  padding: .6em;
+  /*border: 1px solid #ccc;*/
+  position: relative;
+  margin-right: 2px;
+  /*border-top-right-radius: 7px;*/
+}
+
+.tab input[type="radio"] {
+  display: none;
+}
+
+.tab .content {
+  position: absolute;
+  top: /*47*/ 27px;
+  background: #fcfcfc;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding-left: 0px;
+  padding-top: 20px;
+  border: 1px solid gainsboro;
+  border-top-color: crimson;
+  border-top-width: .2em;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+.tab .content p {
+  padding-left: 1em;
+  margin-top: 42px;
+}
+
+.tab .content hr {
+  /*margin-top: 83px;*/
+  background-color: crimson;
+  height: .2em;
+  width: 0%;
+  float: left;
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0;
+}
+
+[type=radio]:checked ~ label {
+  background: crimson;
+  color: white;
+  border-bottom: 3px solid salmon;
+  z-index: 2;
+  font-weight: bolder;
+  transition: .2s;
+}
+
+[type=radio]:checked ~ label ~ .content {
+  z-index: 1;
+  /*top: 27px;
+  transition: 1s;*/
+}
+
+[type=radio]:checked ~ label ~ .content  hr {
+  visibility: visible;
+  width: 100%;
+  transition: .7s;
+}
+
+[type=radio]:checked ~ label ~ .content p {
+  z-index: 1;
+  margin-top: 27px;
+  transition: 1s;
+}
